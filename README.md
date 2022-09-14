@@ -1,0 +1,2 @@
+# DegiskenlerveVeriTiplerleri
+patika.dev DegiskenlerveVeriTiplerleri
