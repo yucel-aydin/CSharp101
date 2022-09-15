@@ -1,5 +1,4 @@
-﻿
-// #region Değişkenler ve Veri Tipleri
+﻿#region Değişkenler ve Veri Tipleri
 // byte b = 5; // 1 byte
 // sbyte sb = 5;// 1 byte
 
@@ -68,9 +67,9 @@
 
 // string hour = DateTime.Now.ToString("HH:mm");
 // Console.WriteLine(hour);
-// #endregion
+ #endregion
 
-// #region Operatörler
+ #region Operatörler
 // Console.WriteLine("*****Atama ve işlemli atama*****");
 // Atama ve işlemli atama
 // int x = 3;
@@ -140,85 +139,110 @@
 // int sonuc2 = 20 % 3;
 // Console.WriteLine(sonuc2);
 
-// #endregion
+ #endregion
 
-#region Tip Dönüşümleri
-// Implicit Conversion (Bilinçsiz Dönüşüm)
-Console.WriteLine("*****Implicit Conversion*****");
+ #region Tip Dönüşümleri
+// // Implicit Conversion (Bilinçsiz Dönüşüm)
+// Console.WriteLine("*****Implicit Conversion*****");
 
-byte a = 5;
-sbyte b = 30;
-short c = 10;
+// byte a = 5;
+// sbyte b = 30; 
+// short c = 10;
 
-int d = a + b + c;
-Console.WriteLine("d!" + d);
+// Convert.ToInt32(a);
+// int d = a + b + c;
+// Console.WriteLine("d!" + d);
 
-long h = d;
-Console.WriteLine("h!" + d);
+// long h = d;
+// Console.WriteLine("h!" + d);
 
-float i = h;
-Console.WriteLine("i!" + d);
+// float i = h;
+// Console.WriteLine("i!" + d);
 
-string e = "burak";
-char f = 'k';
-object g = e + f + d;
-Console.WriteLine("g:" + g);
+// string e = "burak";
+// char f = 'k';
+// object g = e + f + d;
+// Console.WriteLine("g:" + g);
 
-//Explicit Conversion (Bilinçli Dönüşüm)
+// //Explicit Conversion (Bilinçli Dönüşüm)
 
-Console.WriteLine("*****Explicit Conversion*****");
+// Console.WriteLine("*****Explicit Conversion*****");
 
-int x = 4;
-byte y = (byte)x;
-Console.WriteLine("y:" + y);
+// int x = 4;
+// byte y = (byte)x;
+// Console.WriteLine("y:" + y);
 
-int z = 100;
-byte t = (byte)z;
-Console.WriteLine("t:" + t);
+// int z = 100;
+// decimal ssd=0;
+// ssd=z;
 
-float w = 10.3f;
-byte v = (byte)w;
-Console.WriteLine("v:" + v);
+// byte t = (byte)z;
+// Console.WriteLine("t:" + t);
 
-// ToString Methodu
-Console.WriteLine("*****Explicit Conversion*****");
-int xx = 6;
-string yy = xx.ToString();
-Console.WriteLine("yy:" + yy);
+// float w = 10.3f;
+// byte v = (byte)w;
+// Console.WriteLine("v:" + v);
 
-string zz = 12.5f.ToString();
-Console.WriteLine("zz:" + zz);
+// // ToString Methodu
+// Console.WriteLine("*****Explicit Conversion*****");
+// int xx = 6;
+// string yy = xx.ToString();
+// Console.WriteLine("yy:" + yy);
 
-//System Convert Sınıfı
-Console.WriteLine("*****System Convert Sınıfı*****");
+// string zz = 12.5f.ToString();
+// Console.WriteLine("zz:" + zz);
 
-string s1 = "10", s2 = "20";
-int sayi1, sayi2;
-int Toplam;
+// //System Convert Sınıfı
+// Console.WriteLine("*****System Convert Sınıfı*****");
 
-sayi1 = Convert.ToInt32(s1);
-sayi2 = Convert.ToInt32(s2);
+// string s1 = "10", s2 = "20";
+// int sayi1, sayi2;
+// int Toplam;
 
-Toplam = sayi1 + sayi2;
-Console.WriteLine("Toplam:" + Toplam);
+// sayi1 = Convert.ToInt32(s1);
+// sayi2 = Convert.ToInt32(s2);
 
-//Parse Methodu
-Console.WriteLine("*****Parse Methodu*****");
-ParseMethod();
+// Toplam = sayi1 + sayi2;
+// Console.WriteLine("Toplam:" + Toplam);
 
-static void ParseMethod()
+// //Parse Methodu
+// Console.WriteLine("*****Parse Methodu*****");
+// ParseMethod();
+
+// static void ParseMethod()
+// {
+//     string metin1 = "10";
+//     string metin2 = "10,25";
+//     int rakam1;
+//     double double1;
+
+//     rakam1 = Int32.Parse(metin1);
+//     double1 = Double.Parse(metin2);
+
+//     Console.WriteLine("rakam1 :" + rakam1);
+//     Console.WriteLine("double1 :" + double1);
+
+
+// }
+ #endregion
+
+#region Try-Catch-Finally ve Mantıksal Hatalar
+try
 {
-    string metin1 = "10";
-    string metin2 = "10,25";
-    int rakam1;
-    double double1;
+    int a = int.Parse(Console.ReadLine());
 
-    rakam1 = Int32.Parse(metin1);
-    double1 = Double.Parse(metin2);
+    int b = int.Parse(Console.ReadLine());
 
-    Console.WriteLine("rakam1 :" + rakam1);
-    Console.WriteLine("double1 :" + double1);
+    int c = a+b;
 
-
+    Console.WriteLine(c);
+}
+catch(Exception ex)
+{
+    Console.WriteLine("Bir Hata Oluştu: "+ ex.Message);
+}
+finally
+{
+    Console.WriteLine("İşlem tamamlandı.");
 }
 #endregion
