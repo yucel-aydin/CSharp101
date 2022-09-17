@@ -67,9 +67,9 @@
 
 // string hour = DateTime.Now.ToString("HH:mm");
 // Console.WriteLine(hour);
- #endregion
+#endregion
 
- #region Operatörler
+#region Operatörler
 // Console.WriteLine("*****Atama ve işlemli atama*****");
 // Atama ve işlemli atama
 // int x = 3;
@@ -139,14 +139,14 @@
 // int sonuc2 = 20 % 3;
 // Console.WriteLine(sonuc2);
 
- #endregion
+#endregion
 
- #region Tip Dönüşümleri
+#region Tip Dönüşümleri
 // // Implicit Conversion (Bilinçsiz Dönüşüm)
 // Console.WriteLine("*****Implicit Conversion*****");
 
 // byte a = 5;
-// sbyte b = 30; 
+// sbyte b = 30;
 // short c = 10;
 
 // Convert.ToInt32(a);
@@ -224,7 +224,7 @@
 
 
 // }
- #endregion
+#endregion
 
 #region Try-Catch-Finally ve Mantıksal Hatalar
 try
@@ -233,16 +233,33 @@ try
 
     int b = int.Parse(Console.ReadLine());
 
-    int c = a+b;
+    int c = a + b;
 
     Console.WriteLine(c);
 }
-catch(Exception ex)
+catch (Exception ex)
 {
-    Console.WriteLine("Bir Hata Oluştu: "+ ex.Message);
+    Console.WriteLine("Bir Hata Oluştu: " + ex.Message);
 }
 finally
 {
     Console.WriteLine("İşlem tamamlandı.");
 }
 #endregion
+
+#region Karar Yapıları - If-ElseIf-Ternary-If
+int time = DateTime.Now.Hour;
+
+if (time >= 6 && time < 11)
+    Console.WriteLine("Günaydın.");
+else if (time <= 18)
+    Console.WriteLine("İyi günler.");
+else
+    Console.WriteLine("İyi geceler.");
+
+string sonuç = time <= 18 ? "İyi günler." : "İyi geceler.";
+
+sonuç = time >= 6 && time < 11 ? "Günaydın." : time <= 18 ? "İyi günler." : "İyi geceler.";
+Console.WriteLine(sonuç);
+#endregion
+
