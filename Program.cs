@@ -388,3 +388,20 @@ for (int i = 1; i < 10; i++) // 1'den başladı 10'a kadar gitti fakat koşulun 
 // orası devam eder ve en iç loop sonlanır.
 #endregion
 
+#region  Döngüler- While ve ForEach
+
+// Koşullar sağlandıkça komut satırlarının çalıştırılmasını sağlar. For döngüsünden farklı olarak iterasyon sayısı belli değildir.
+int sayac = 1;
+while (sayac <= 5)
+{
+    Console.WriteLine(sayac);
+    sayac++;
+}
+int[] sayiDizisi = {2,4,5,1,2,4};
+int toplam = 0 ;
+// Foreach döngüsü diziler ve koleksiyonlarla döngüsel işlemler yapmak için kullanılır. Yapısı while ve for döngüsünden biraz farklıdır. Döngünün ne kadar devam edeceğini kullanılan dizi veya koleksiyonun eleman sayısı belirler. Her bir elaman için bir iterasyon gerçekleşir.
+foreach(int i in sayiDizisi)
+{
+    toplam += i ;
+}
+#endregion
